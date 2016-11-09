@@ -68,7 +68,7 @@ Adds a few conveniences for perfectionists:
 
 * Sets the ``Content-Length`` header for non-streaming responses.
 
-.. versionchanged: 1.11
+.. versionchanged:: 1.11
 
     Older versions didn't set the ``Content-Length`` header.
 
@@ -181,11 +181,10 @@ header, the middleware adds one if needed. If the response has a ``ETag`` or
 ``If-Modified-Since``, the response is replaced by an
 :class:`~django.http.HttpResponseNotModified`.
 
-Also sets the ``Date`` and ``Content-Length`` response-headers.
-
 .. versionchanged:: 1.11
 
-    In older versions, the middleware didn't set the ``ETag`` header.
+    In older versions, the middleware set the ``Content-Length`` and ``Date``
+    headers and didn't set the ``ETag`` header.
 
 Locale middleware
 -----------------
