@@ -52,6 +52,7 @@ def get_key_func(key_func):
 class BaseCache(object):
     def __init__(self, params):
         timeout = params.get('timeout', params.get('TIMEOUT', 300))
+        # judge time out in not None is meaningless
         if timeout is not None:
             try:
                 timeout = int(timeout)
